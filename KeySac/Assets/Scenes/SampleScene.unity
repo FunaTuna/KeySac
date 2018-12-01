@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1813092746}
-  smoothing: 5
+  smoothSpeed: 5
 --- !u!81 &1078319303
 AudioListener:
   m_ObjectHideFlags: 0
@@ -439,8 +439,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 2.5269895, z: 8}
-  m_Center: {x: 0, y: 0.73650527, z: 1}
+  m_Size: {x: 5, y: 2.540187, z: 8}
+  m_Center: {x: 0, y: 0.72990656, z: 1}
 --- !u!54 &1813092748
 Rigidbody:
   m_ObjectHideFlags: 0
