@@ -19,6 +19,7 @@ ModelImporter:
     2100002: GunTrack_001
     2100004: unnamed
     2100006: Material
+    2100008: Material_001
     2300000: Glow
     2300002: GunHolder
     2300004: Main_body
@@ -53,6 +54,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: ef63b4d4b0172cf4492b04230979166c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_001
+    second: {fileID: 2100000, guid: c9455438fe515ae42abcd0ecbcdab0e0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
