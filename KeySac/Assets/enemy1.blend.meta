@@ -1,69 +1,30 @@
 fileFormatVersion: 2
-guid: 620a35dd933ad5d4bbbb90778020aede
+guid: e5d852bdd5963c943b1b72223243651e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Glow
-    100002: GunHolder
-    100004: Main_body
-    100006: Railgun
-    100008: //RootNode
-    100010: Tracks
-    400000: Glow
-    400002: GunHolder
-    400004: Main_body
-    400006: Railgun
-    400008: //RootNode
-    400010: Tracks
-    2100000: GunTrack
-    2100002: GunTrack_001
-    2100004: unnamed
-    2100006: Material
-    2100008: Material_001
-    2300000: Glow
-    2300002: GunHolder
-    2300004: Main_body
-    2300006: Railgun
-    2300008: Tracks
-    3300000: Glow
-    3300002: GunHolder
-    3300004: Main_body
-    3300006: Railgun
-    3300008: Tracks
-    4300000: Glow
-    4300002: GunHolder
-    4300004: Tracks
-    4300006: Railgun
-    4300008: Main_body
+    100000: Armature
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_002
+    100008: Bone_003
+    100010: Cube
+    100012: //RootNode
+    400000: Armature
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_002
+    400008: Bone_003
+    400010: Cube
+    400012: //RootNode
+    2100000: Material_001
+    2100002: Material
+    4300000: Cube
     7400000: Default Take
+    7400002: ArmatureAction
     9500000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GunTrack
-    second: {fileID: 2100000, guid: 92626dac439982d4aa5cf9bb889bb514, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GunTrack_001
-    second: {fileID: 2100000, guid: 92626dac439982d4aa5cf9bb889bb514, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: ef63b4d4b0172cf4492b04230979166c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_001
-    second: {fileID: 2100000, guid: c9455438fe515ae42abcd0ecbcdab0e0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: unnamed
-    second: {fileID: 2100000, guid: 2bbfd249f20987f4ab0cc84349c45438, type: 2}
+    13700000: Cube
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
