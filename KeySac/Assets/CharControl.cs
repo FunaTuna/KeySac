@@ -13,6 +13,9 @@ public class CharControl : MonoBehaviour {
 
     public Rigidbody rb;
 
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -31,7 +34,7 @@ public class CharControl : MonoBehaviour {
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * Time.deltaTime * moveSpeed;
-            //rb.AddRelativeForce(transform.forward * moveSpeed * Time.deltaTime);
+            //rb.velocity  = transform.forward * moveSpeed * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -55,5 +58,22 @@ public class CharControl : MonoBehaviour {
         {
             transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Fire();
+        }
+    }
+
+    void Fire() {
+        //Create bullet
+        var bullet = (GameObject)Instantiate(
+        bulletPrefab,
+        bulletSpawn.position,
+        bulletSpawn.rotation);
+
+        // Add velocity to bullet
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        bullet.AddComponent<TrailRenderer>();
     }
 }
