@@ -6,7 +6,7 @@ public class followPlayerCam : MonoBehaviour {
 
     public GameObject target;
     public float size = 10;
-    public float scrollSpeed = 30;
+    //public float scrollSpeed = 30;
 
     Vector3 pos;
     private Camera cam;
@@ -21,8 +21,8 @@ public class followPlayerCam : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        this.cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed * Time.deltaTime;
+	void LateUpdate () {
+        //this.cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed * Time.deltaTime;
 
         float distance = 30;
 
