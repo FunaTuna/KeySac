@@ -9,10 +9,12 @@ public class RghtButton : MonoBehaviour {
 	public int BoonChoiceState;
 	private bool[] internalBoons;
 	public GameObject LeftButton;
+	private LftButton lfscript;
 	// Use this for initialization
 	void Start () {
 		gameManager = FindObjectOfType<StateMachine> ();
 		internalBoons = gameManager.getBoons();
+		lfscript=LeftButton.GetComponent<LftButton> ();
 		int count = 0;
 		for (int i= internalBoons.Length; i>0;i=i-1){
 			if (internalBoons[i]== false){
@@ -46,7 +48,7 @@ public class RghtButton : MonoBehaviour {
 		string[] keyToString = {"q","w","e","a","s","d","space"};
 		string[] boonToString ={"damage","hp","speed"};
 		gameManager.boonAquire(boonToString[BoonChoiceState]);
-		gameManager.sacrifice(keyToString[LeftButton.GetComponent<LftButton>.SacChoiceState]);
+		gameManager.sacrifice(keyToString[lfscript.SacChoiceState]);
 		gameManager.onTradeFinish();
 
 		}
