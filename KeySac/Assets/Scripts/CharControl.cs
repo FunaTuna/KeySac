@@ -90,9 +90,6 @@ public class CharControl : MonoBehaviour {
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
         //Bullet trail add
         bullet.AddComponent<TrailRenderer>();
-
-        //TODO: Wait for firing animation to stop before allowing another fire to occur
-
     }
 
 	void SetDamage(){
@@ -112,9 +109,7 @@ public class CharControl : MonoBehaviour {
 
     //Function to prevent firing again for as long as firing animation lasts
     private IEnumerator FireAnimation () {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fire")) {
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        }
     }
 
     private IEnumerator ChargeAnimation() {
