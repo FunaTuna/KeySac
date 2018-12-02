@@ -13,7 +13,7 @@ public class RghtButton : MonoBehaviour {
 		BoonChoiceState = (int)Mathf.Floor(Random.Range(0,2));
 		string[] Boons = {"More damage","More HP","Faster Movement"};
 		string corrispondingBoon = Boons[BoonChoiceState];
-		this.GetComponentInChildren<Text>().text = ("Or Be granted "+ corrispondingBoon + "?");
+		this.GetComponentInChildren<Text>().text = ("Or Be Granted "+ corrispondingBoon + "?");
 	}
 	
 	// Update is called once per frame
