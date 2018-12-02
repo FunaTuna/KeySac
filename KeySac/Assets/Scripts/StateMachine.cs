@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 public class StateMachine : MonoBehaviour {
 	public static StateMachine instance = null;
 	string currentState;
-	public static bool[] Keys;
-	private int level;
+	public static bool[] Keys = new bool[] {true,true,true,true,true,true,true};
+	//Q //W //E //A //S //D//Space
+	private static int level = 1;
 
-	private int Health;
-	private int Damage;
-	private float speed;
+	private static int Health;
+	private static int Damage;
+	private static float speed;
 	void Awake(){
 		if (instance == null) {
 			instance = this;
@@ -19,9 +20,6 @@ public class StateMachine : MonoBehaviour {
 		}
 		DontDestroyOnLoad (this);
 		currentState = "startscreen";
-		level = 1;
-		Keys = new bool[] {true,true,true,true,true,true,true};
-		 //Q //W //E //A //S //D//Space
 
 	}
 	//change player state

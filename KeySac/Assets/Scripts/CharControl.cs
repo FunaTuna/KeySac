@@ -27,7 +27,7 @@ public class CharControl : MonoBehaviour
 		gameManager = FindObjectOfType<StateMachine> ();
 		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
-		//setStats ();
+		setStats ();
 		//here for testing
 		//gameManager.trade("q");
     }
@@ -44,7 +44,7 @@ public class CharControl : MonoBehaviour
 
     void Move()
     {
-		print ("A key is being pressed");
+		
         bool[] Keys = gameManager.getKeys();
         if (Input.GetKey(KeyCode.W) && Keys[1])
         {
