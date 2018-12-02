@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PartolScript : MonoBehaviour {
-	private int speed;
+	private float speed;
 	private int health;
 	private int direction;
 	public int distance;
-	private int startpos;
+	private float startpos;
 	// Use this for initialization
 	void Start () {
 		speed = 4f;
