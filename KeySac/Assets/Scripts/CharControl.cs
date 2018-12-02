@@ -18,25 +18,23 @@ public class CharControl : MonoBehaviour
 
     private GameObject stateMachine;
     public GameObject bulletPrefab;
+
     public Transform bulletSpawn;
 
-    // Use this for initialization
-    void Start()
-    {
-        gameManager = FindObjectOfType<StateMachine>();
-        animator = GetComponent<Animator>();
+	// Use this for initialization
+	void Start () {
+		gameManager = FindObjectOfType<StateMachine> ();
+		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
-        //here for testing
-        //gameManager.trade("q");
+		setStats ();
+		//here for testing
+		//gameManager.trade("q");
     }
-
-    void Update()
-    {
-        if (health <= 0)
-        {
-            gameManager.OnDeath();
-            //Destroy (this.gameObject);
-        }
+	
+	void Update () {
+		if (health <= 0) {
+			gameManager.OnDeath ();
+			//Destroy (this.gameObject);
 
         if (Input.anyKey) //Only execute if a key is being pressed
         {
@@ -100,23 +98,29 @@ public class CharControl : MonoBehaviour
         }
 
     }
+    
+	//Sets bullet damage
+	void SetDamage(){
+		BulletScript.SetDamage (damage);
+	}
 
-    void SetDamage()
-    {
-        BulletScript.SetDamage(damage);
-    }
+	//Updates stats from StateMachine
+	public void setStats(){
+		health = gameManager.getHealth ();
+		damage = gameManager.getDamage ();
+		SetDamage ();
+		moveSpeed = gameManager.getSpeed ();
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //Controls collision with enemy
-        if (other.tag == "Enemy")
-        {
-            health -= 1;
-            Destroy(other.gameObject);
-        }
-        if (other.tag == "Finish")
-        {
-            gameManager.onLevelFinish();
-        }
-    }
+	}
+
+	private void OnTriggerEnter(Collider other){
+		//Controls collision with enemy
+		if (other.tag == "Enemy") {
+			health -= 1;
+			Destroy(other.gameObject);
+		}
+		if (other.tag == "Finish") {
+			gameManager.onLevelFinish ();
+		}
+	}
 }

@@ -7,7 +7,14 @@ public class StateMachine : MonoBehaviour {
 	string currentState;
 	public static bool[] Keys;
 	private int level;
+
+	private int Health;
+	private int Damage;
+	private float speed;
 	void Awake(){
+		Health = 1;
+		Damage = 1;
+		speed = 4f;
 		if (instance == null) {
 			instance = this;
 		} else if (instance != this) {
@@ -20,6 +27,21 @@ public class StateMachine : MonoBehaviour {
 		 //Q //W //E //A //S //D//Space
 
 	}
+	//change player state
+	public void setHealth(int HP){
+		Health = HP;
+	}
+	public void setDamage(int dam){
+		Damage = dam;
+	}
+	public void setSpeed(float spe){
+		speed = spe;
+	}
+	//Change the player stats
+	public int getHealth(){return Health;}
+	public int getDamage(){return Damage;}
+	public float getSpeed(){return speed;}
+
 	public void OnRestart(){
 		currentState = "level1";
 		SceneManager.LoadScene ("SampleScene");
