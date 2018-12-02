@@ -14,7 +14,7 @@ public class LftButton : MonoBehaviour {
 		gameManager = FindObjectOfType<StateMachine> ();
 		internalKeys = gameManager.getKeys();
 		int count = 0;
-		for (int i= (internalKeys.Length); i>0;i=i-1){
+		for (int i= (internalKeys.Length-1); i>0;i=i-1){
 			if ( internalKeys[i]== true){
 				count++;
 			}
@@ -22,10 +22,10 @@ public class LftButton : MonoBehaviour {
 		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
 		//chooses one of those keys
 		if (count >0){
-			for(int i=0;i<=internalKeys.Length;i=i-1){
+			for(int i=0;i<=internalKeys.Length-1;i++){
 				if (internalKeys[i] == true){
 					count = count-1;
-					if (count== 0){
+					if (count== transitionalChoice){
 						SacChoiceState = i;
 						break;
 					}

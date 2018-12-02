@@ -16,7 +16,7 @@ public class RghtButton : MonoBehaviour {
 		internalBoons = gameManager.getBoons();
 		lfscript=LeftButton.GetComponent<LftButton> ();
 		int count = 0;
-		for (int i= internalBoons.Length; i>0;i=i-1){
+		for (int i= internalBoons.Length-1; i>0;i=i-1){
 			if (internalBoons[i]== false){
 				count++;
 			}
@@ -24,10 +24,10 @@ public class RghtButton : MonoBehaviour {
 		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
 		//chooses one of those internalBoons
 		if (count >0){
-			for(int i=0;i<=internalBoons.Length;i=i-1){
+			for(int i=0;i<=internalBoons.Length-1;i++){
 				if (internalBoons[i] == false){
 					count = count-1;
-					if (count== 0){
+					if (count== transitionalChoice){
 						BoonChoiceState = i;
 						break;
 					}
