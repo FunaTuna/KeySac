@@ -72,20 +72,19 @@ public class CharControl : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Space)&& Keys[6])
         {
-            Fire();
+			StartCoroutine ("Fire");
         }
     }
 
-    void Fire() {
+    IEnumerator Fire() {
         //Create bullet
 		animator.SetTrigger("Fire");
+		yield return new WaitForSeconds(0.5f);
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-
         //Add velocity to bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
         //Bullet trail add
         bullet.AddComponent<TrailRenderer>();
-
     }
 	void SetDamage(){
 		BulletScript.SetDamage (damage);
