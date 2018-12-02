@@ -73,7 +73,7 @@ public class CharControl : MonoBehaviour {
         bulletSpawn.rotation);
 
         // Add velocity to bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 600;
         bullet.AddComponent<TrailRenderer>();
 
     }
