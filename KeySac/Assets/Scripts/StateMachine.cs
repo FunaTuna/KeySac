@@ -73,9 +73,9 @@ public class StateMachine : MonoBehaviour {
 	public void boonAquire(string boon){
 		switch(boon){
 		case "damage":
-			Boons[0]= true;
-			setDamage(4);
-			break
+			Boons [0] = true;
+			setDamage (4);
+			break;
 		case "hp":
 			Boons[1] = true;
 			setHealth(3);
