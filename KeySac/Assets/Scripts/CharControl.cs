@@ -7,6 +7,7 @@ public class CharControl : MonoBehaviour
 {
     Animator animator;
     StateMachine gameManager;
+	public Material trailmat;
     float moveSpeed = 4f; //Movement speed
     //float maxSpeed = 4f; //Maximum speed of player
     float turnSpeed = 50f; //Turning/rotation speed; adjustable
@@ -105,6 +106,7 @@ public class CharControl : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
             //Bullet trail add
             bullet.AddComponent<TrailRenderer>();
+			bullet.GetComponent<TrailRenderer> ().material = trailmat;
         }
 
     }

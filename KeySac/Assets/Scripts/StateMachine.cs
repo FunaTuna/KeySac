@@ -7,6 +7,7 @@ public class StateMachine : MonoBehaviour {
 	string currentState;
 	public static bool[] Keys = new bool[] {true,true,true,true,true,true,true};
 	//Q //W //E //A //S //D//Space
+	public static bool[] Boons = new bool[] {false,false,false};
 	private static int level = 1;
 
 	private static int Health;
@@ -44,6 +45,7 @@ public class StateMachine : MonoBehaviour {
 		Damage = 1;
 		speed = 4f;
 		Keys = new bool[] {true,true,true,true,true,true,true};
+		Boons = new bool[] {false,false,false};
 	}
 	public void OnDeath(){
 		currentState = "GameOver";
@@ -55,6 +57,7 @@ public class StateMachine : MonoBehaviour {
 		Damage = 1;
 		speed = 4f;
 		Keys = new bool[] {true,true,true,true,true,true,true};
+		Boons = new bool[] {false,false,false};
 		SceneManager.LoadScene ("SampleScene");
 	}
 	public void onLevelFinish(){
@@ -67,7 +70,22 @@ public class StateMachine : MonoBehaviour {
 		print (currentState);
 		SceneManager.LoadScene ("level" + level);
 	}
-	public void trade(string key){
+	public void boonAquire(string boon){
+		switch(key){
+		case "damage":
+			Boons[0]= true;
+			setDamage(4)
+			break
+		case "hp":
+			Boons[1] = true;
+			setHealth(3)
+			break;
+		case "speed":
+			Boons[2] = true;
+			setSpeed(6f)
+			break;
+	}
+	public void sacrifice(string key){
 		switch (key) {
 		case "q":
 			Keys [0] = false;

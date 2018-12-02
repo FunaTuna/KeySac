@@ -327,7 +327,7 @@ Camera:
   m_GameObject: {fileID: 1294201427712182}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -613,7 +613,7 @@ Animator:
   m_GameObject: {fileID: 1653084836648454}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 620a35dd933ad5d4bbbb90778020aede, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7637223abcbb56b4388f3758f8122e85, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -830,6 +830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decf34c627ebd4e82acd18e5671591e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trailmat: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   rb: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1657485340355804, guid: 62911b15abe4c4add8de6576e6c4a6b8,
+    type: 2}
   bulletSpawn: {fileID: 4035286594099570}
