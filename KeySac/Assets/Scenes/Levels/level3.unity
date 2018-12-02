@@ -850,6 +850,17 @@ Prefab:
       propertyPath: m_ClearFlags
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 95724722914774560, guid: 4357089dfe4e74617ab62fcfb16926c8,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7637223abcbb56b4388f3758f8122e85, type: 2}
+    - target: {fileID: 114524188892683096, guid: 4357089dfe4e74617ab62fcfb16926c8,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1657485340355804, guid: 62911b15abe4c4add8de6576e6c4a6b8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
   m_IsPrefabAsset: 0
