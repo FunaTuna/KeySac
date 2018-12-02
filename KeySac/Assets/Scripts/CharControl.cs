@@ -72,26 +72,20 @@ public class CharControl : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Space)&& Keys[6])
         {
-            Fire();
+			StartCoroutine ("Fire");
         }
     }
 
-    void Fire() {
-        //Set firing animation to start
+    IEnumerator Fire() {
+        //Create bullet
 		animator.SetTrigger("Fire");
-
-        //Wait until shooting point in animation to make bullet
-        StartCoroutine(ChargeAnimation());
-
-        //Make bullet
+		yield return new WaitForSeconds(0.5f);
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-
         //Add velocity to bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
         //Bullet trail add
         bullet.AddComponent<TrailRenderer>();
     }
-
 	void SetDamage(){
 		BulletScript.SetDamage (damage);
 	}
@@ -106,13 +100,3 @@ public class CharControl : MonoBehaviour {
 			gameManager.onLevelFinish ();
 		}
 	}
-
-    //Function to prevent firing again for as long as firing animation lasts
-    private IEnumerator FireAnimation () {
-            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-    }
-
-    private IEnumerator ChargeAnimation() {
-        yield return new WaitForSeconds(1);
-    }
-}
