@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 
 public class LftButton : MonoBehaviour {
+	StateMachine gameManager;
 	public int SacChoiceState;
 	// Use this for initialization
 	void Start () {
@@ -18,5 +19,9 @@ public class LftButton : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	void OnClick(){
+		
+		//onTradeFinish();
 	}
 }

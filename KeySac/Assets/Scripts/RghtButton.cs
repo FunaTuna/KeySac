@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 
 public class RghtButton : MonoBehaviour {
+	StateMachine gameManager;
 	public int BoonChoiceState;
 	// Use this for initialization
 	void Start () {
@@ -17,5 +18,10 @@ public class RghtButton : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	void onClick(){
+		string[] NumToString = {"q","w","e","a","s","d","space"}  ;
+		//Trade(NumToString[SacChoiceState]);
+		//onTradeFinish();
 	}
 }
