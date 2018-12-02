@@ -4,26 +4,32 @@ using UnityEngine;
 
 public class CharControl : MonoBehaviour {
 	Animator animator;
-
+	StateMachine gameManager;
     float moveSpeed = 4f; //Movement speed
     //float maxSpeed = 4f; //Maximum speed of player
     float turnSpeed = 50f; //Turning/rotation speed; adjustable
 
     //float acceleration = 2f;
     //float deceleration = 2f;
-
+	public int health;
     public Rigidbody rb;
 
+	private GameObject stateMachine;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
 	// Use this for initialization
 	void Start () {
+		gameManager = FindObjectOfType<StateMachine> ();
 		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
     }
 	
 	void Update () {
+		if (health <= 0) {
+			gameManager.OnDeath ();
+			//Destroy (this.gameObject);
+		}
 
         if (Input.anyKey) //Only execute if a key is being pressed
         {
@@ -78,4 +84,12 @@ public class CharControl : MonoBehaviour {
         bullet.AddComponent<TrailRenderer>();
 
     }
+
+	private void OnTriggerEnter(Collider other){
+		//Controls collision with enemy
+		if (other.tag == "Enemy") {
+			health -= 1;
+			Destroy(other.gameObject);
+		}
+	}
 }
