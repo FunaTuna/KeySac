@@ -12,6 +12,7 @@ public class CharControl : MonoBehaviour {
     //float acceleration = 2f;
     //float deceleration = 2f;
 	public int health;
+	public int damage;
     public Rigidbody rb;
 
 	private GameObject stateMachine;
@@ -85,7 +86,7 @@ public class CharControl : MonoBehaviour {
 
     }
 	void SetDamage(){
-		BulletScript.SetDamage (1);
+		BulletScript.SetDamage (damage);
 	}
 
 	private void OnTriggerEnter(Collider other){

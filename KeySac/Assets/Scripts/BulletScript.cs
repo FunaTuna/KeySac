@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
-			EnemyMovement enemy = other.GetComponent<EnemyMovement> ();
+			EnemyMovement enemy = other.GetComponentInParent<EnemyMovement> ();
 			enemy.damage (BulletDamage);
             Destroy(gameObject);
             Debug.Log(other.name);
