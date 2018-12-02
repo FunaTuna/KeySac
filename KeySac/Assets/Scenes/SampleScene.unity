@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8773585, g: 0.028969401, b: 0.028969401, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1110,7 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decf34c627ebd4e82acd18e5671591e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailmat: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   rb: {fileID: 0}
   healthUI: {fileID: 956265674}
   bulletPrefab: {fileID: 1657485340355804, guid: 62911b15abe4c4add8de6576e6c4a6b8,
