@@ -42,23 +42,23 @@ public class EnemyMovement : MonoBehaviour {
 
     //Movement - patrols forwardsin straight line (unless player is seen)
     void Move() {
-        transform.position += transform.right * speed * Time.deltaTime;
+        transform.position += -transform.right * speed * Time.deltaTime;
     }
 
     //TODO: Turn around on collision with a wall
-    //void OnCollisionEnter(Collision other)
-    //{
-    //    if (other.collider.gameObject.tag == "Walls")
-    //    {
-    //        transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
-    //    }
-    //}
-
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    void OnCollisionEnter(Collision other)
     {
-        if (hit.collider.gameObject.tag == "Walls")
+        if (other.collider.gameObject.tag == "Walls")
         {
             transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
         }
     }
+
+    //void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    if (hit.collider.gameObject.tag == "Walls")
+    //    {
+    //        transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
+    //    }
+    //}
 }
