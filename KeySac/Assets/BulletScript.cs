@@ -20,5 +20,10 @@ public class BulletScript : MonoBehaviour {
             Destroy(gameObject);
             Debug.Log(other.name);
         }
+		if (other.gameObject.tag == "Walls")
+		{
+			Destroy(gameObject);
+			Debug.Log(other.name);
+		}
     }
 }
