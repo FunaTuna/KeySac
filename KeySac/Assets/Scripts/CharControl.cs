@@ -24,6 +24,7 @@ public class CharControl : MonoBehaviour {
 		gameManager = FindObjectOfType<StateMachine> ();
 		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
+		setStats ();
 		//here for testing
 		//gameManager.trade("q");
     }
@@ -86,8 +87,18 @@ public class CharControl : MonoBehaviour {
         //Bullet trail add
         bullet.AddComponent<TrailRenderer>();
     }
+	//Sets bullet damage
 	void SetDamage(){
 		BulletScript.SetDamage (damage);
+	}
+
+	//Updates stats from StateMachine
+	public void setStats(){
+		health = gameManager.getHealth ();
+		damage = gameManager.getDamage ();
+		SetDamage ();
+		moveSpeed = gameManager.getSpeed ();
+
 	}
 
 	private void OnTriggerEnter(Collider other){
