@@ -11,7 +11,7 @@ public class CharControl : MonoBehaviour {
 
     //float acceleration = 2f;
     //float deceleration = 2f;
-
+	public int health;
     public Rigidbody rb;
 
     public GameObject bulletPrefab;
@@ -24,6 +24,9 @@ public class CharControl : MonoBehaviour {
     }
 	
 	void Update () {
+		if (health <= 0) {
+			Destroy (this.gameObject);
+		}
 
         if (Input.anyKey) //Only execute if a key is being pressed
         {
@@ -78,4 +81,12 @@ public class CharControl : MonoBehaviour {
         bullet.AddComponent<TrailRenderer>();
 
     }
+
+	private void OnTriggerEnter(Collider other){
+		//Controls collision with enemy
+		if (other.tag == "Enemy") {
+			health -= 1;
+			Destroy(other.gameObject);
+		}
+	}
 }
