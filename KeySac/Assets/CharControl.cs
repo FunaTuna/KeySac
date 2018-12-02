@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharControl : MonoBehaviour {
+	Animator animator;
 
     float moveSpeed = 4f; //Movement speed
     //float maxSpeed = 4f; //Maximum speed of player
@@ -18,6 +19,7 @@ public class CharControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
     }
 	
@@ -67,6 +69,7 @@ public class CharControl : MonoBehaviour {
 
     void Fire() {
         //Create bullet
+		animator.SetTrigger("Fire");
         var bullet = (GameObject)Instantiate(
         bulletPrefab,
         bulletSpawn.position,
