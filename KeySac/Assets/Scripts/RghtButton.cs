@@ -24,7 +24,7 @@ public class RghtButton : MonoBehaviour {
 	public void onClick(){
 		print ("Right Clicked");
 		string[] NumToString = {"q","w","e","a","s","d","space"}  ;
-		gameManager.trade(NumToString[this.SacChoiceState]);
+		gameManager.sacrifice(NumToString[this.SacChoiceState]);
 		gameManager.onTradeFinish();
 	}
 }
