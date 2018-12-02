@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour {
+public class WallScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,13 +12,10 @@ public class BulletScript : MonoBehaviour {
 	void Update () {
 	}
 
-    //Destroy bullet on collision with enemy
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-            Debug.Log(other.name);
+        if (other.tag == "Bullet") {
+            Destroy(other.gameObject);
         }
     }
 }

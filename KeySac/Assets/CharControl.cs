@@ -70,14 +70,11 @@ public class CharControl : MonoBehaviour {
     void Fire() {
         //Create bullet
 		animator.SetTrigger("Fire");
-        var bullet = (GameObject)Instantiate(
-        bulletPrefab,
-        bulletSpawn.position,
-        bulletSpawn.rotation);
+        var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
-        // Add velocity to bullet
+        //Add velocity to bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
-
+        //Bullet trail add
         bullet.AddComponent<TrailRenderer>();
 
     }
