@@ -15,9 +15,12 @@ public class BulletScript : MonoBehaviour {
 	}
 
     //Destroy on collision with wall or enemy
-    void DestroyOnCollision (Collision other) {
-        if (other.gameObject.CompareTag("Walls") || other.gameObject.CompareTag("Enemy")) {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Walls" || other.gameObject.tag == "Enemy")
+        {
             Destroy(gameObject);
+            Debug.Log(other.name);
         }
     }
 }
