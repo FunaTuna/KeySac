@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour {
 
     //Movement - patrols forwardsin straight line (unless player is seen)
     void Move() {
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.right * speed * Time.deltaTime;
     }
 
     //TODO: Turn around on collision with a wall
