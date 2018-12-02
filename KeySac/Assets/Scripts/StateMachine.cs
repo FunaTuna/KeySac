@@ -13,18 +13,24 @@ public class StateMachine : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (this);
-		currentState = "level1";
-		Keys = new bool[] {true,true,true,true,true,true,true};
+		currentState = "startscreen";
+		//Keys = new bool[] {true,true,true,true,true,true,true};
 		 //Q //W //E //A //S //D//Space
 
 	}
 	public void OnRestart(){
 		currentState = "level1";
 		SceneManager.LoadScene ("SampleScene");
+		Keys = new bool[] {true,true,true,true,true,true,true};
 	}
 	public void OnDeath(){
 		currentState = "GameOver";
 		SceneManager.LoadScene ("Game Over");
+	}
+	public void onStart(){
+		currentState = "level1";
+		SceneManager.LoadScene ("SampleScene");
+		Keys = new bool[] {true,true,true,true,true,true,true};
 	}
 	public void trade(string key){
 		switch (key) {
