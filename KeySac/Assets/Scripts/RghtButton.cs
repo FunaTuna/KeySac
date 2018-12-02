@@ -13,19 +13,23 @@ public class RghtButton : MonoBehaviour {
 		gameManager = FindObjectOfType<StateMachine> ();
 		int count = 0;
 		for (int i= gameManager.Boons.Length; i>0;i=i-1){
-			if gameManager.Boons[i]== false:
-				count++
+			if (gameManager.Boons[i]== false){
+				count++;
+			}
 		} // counts the number of Boons you can use.
 		transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
 		//chooses one of those Boons
-		if count >0;
-			for(int i=0;i=<gameManager.Boons.Length;i=i-1}(
-				if gameManger.Boons[i] == false:
-					count = count-1
-					if count== 0:
+		if (count >0){
+			for(int i=0;i<=gameManager.Boons.Length;i=i-1){
+				if (gameManger.Boons[i] == false){
+					count = count-1;
+					if (count== 0){
 						BoonChoiceState = i;
 						break;
-		BoonChoiceState = (int)Mathf.Floor(Random.Range(0,2));
+					}
+				}
+			}
+		}
 		string[] Boons = {"More damage","More HP","Faster Movement"};
 		string corrispondingBoon = Boons[BoonChoiceState];
 		this.GetComponentInChildren<Text>().text = ("Or be Granted "+ corrispondingBoon + "?");
@@ -33,14 +37,15 @@ public class RghtButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	public void onClick(){
 		print ("Right Clicked");
 		string[] keyToString = {"q","w","e","a","s","d","space"};
-		string[] boonToString ={"damage","hp","speed"}:
+		string[] boonToString ={"damage","hp","speed"};
 		gameManager.boonAquire(boonToString[BoonChoiceState]);
 		gameManager.sacrifice(keyToString[this.SacChoiceState]);
 		gameManager.onTradeFinish();
+
+		}
 	}
-}

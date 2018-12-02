@@ -17,7 +17,7 @@ public class LftButton : MonoBehaviour {
 				count++;
 			}
 		} // counts the number of Keys you can use.
-		transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
+		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
 		//chooses one of those keys
 		if (count >0){
 			for(int i=0;i<=gameManager.Keys.Length;i=i-1){
@@ -28,7 +28,7 @@ public class LftButton : MonoBehaviour {
 						break;
 					}
 				}
-			}//looks up what that choice is and assigns it to a number the 
+			}//looks up what that choice is and assigns it to a number the rest of the code understands.
 	}
 		string[] Keys = {"Turn Left","Move forwards","Turn Right","Move Left","Reverse","Move Right","Fire Your primary weapon"};
 		string corrispondingKey = Keys[SacChoiceState];
