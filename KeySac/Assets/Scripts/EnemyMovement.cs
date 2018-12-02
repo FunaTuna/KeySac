@@ -19,8 +19,6 @@ public class EnemyMovement : MonoBehaviour {
 	void Update () {
         speed = 4f;
 
-        Move();
-
 		if (health <= 0) {
 			Destroy (gameObject);
 		}
@@ -40,19 +38,19 @@ public class EnemyMovement : MonoBehaviour {
         }
     }
 
-    //Movement - patrols forwardsin straight line (unless player is seen)
-    void Move() {
-        transform.position += -transform.right * speed * Time.deltaTime;
-    }
+    //TODO: Patrols forwards in straight line (unless player is seen); turn around on collision with a wall
+    //(Reuse this script for other enemy type)
+    //void Move() {
+    //    transform.position += transform.forward * speed * Time.deltaTime;
+    //}
 
-    //TODO: Turn around on collision with a wall
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.gameObject.tag == "Walls")
-        {
-            transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
-        }
-    }
+    //void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.collider.gameObject.tag == "Walls")
+    //    {
+    //        transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
+    //    }
+    //}
 
     //void OnControllerColliderHit(ControllerColliderHit hit)
     //{
