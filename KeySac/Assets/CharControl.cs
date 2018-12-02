@@ -77,6 +77,7 @@ public class CharControl : MonoBehaviour {
 
         // Add velocity to bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
+
         bullet.AddComponent<TrailRenderer>();
 
     }
