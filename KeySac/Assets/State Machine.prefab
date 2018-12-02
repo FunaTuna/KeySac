@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4808548440150102}
   - component: {fileID: 114366843442562466}
+  - component: {fileID: 114978090928682028}
   m_Layer: 0
   m_Name: State Machine
   m_TagString: Untagged
@@ -51,3 +52,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7b939457ad5f4498d41425f8765268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114978090928682028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444996622045568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f796b282cb0428cbfc57e0423cf677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pewClip: {fileID: 0}
+  pewSource: {fileID: 0}

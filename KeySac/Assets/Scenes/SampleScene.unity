@@ -795,8 +795,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1305374107}
   - component: {fileID: 1305374106}
+  - component: {fileID: 1305374108}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AudioObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,12 +905,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1305374105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.15926, y: 13.164251, z: 7.5867186}
+  m_LocalPosition: {x: 9.15926, y: 13.164251, z: 10.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305374108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305374105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f796b282cb0428cbfc57e0423cf677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pewClip: {fileID: 8300000, guid: f5bddbe839a834a4ea90f68ba12db6be, type: 3}
+  pewSource: {fileID: 1305374106}
 --- !u!1001 &1320280739
 Prefab:
   m_ObjectHideFlags: 0
@@ -1184,6 +1198,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1657485340355804, guid: 62911b15abe4c4add8de6576e6c4a6b8,
     type: 2}
   bulletSpawn: {fileID: 352917205}
+  audioSource: {fileID: 1305374106}
 --- !u!4 &1813092751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: 620a35dd933ad5d4bbbb90778020aede,

@@ -27,6 +27,9 @@ public class CharControl : MonoBehaviour
     //Spawn point for player bullets
     public Transform bulletSpawn;
 
+    //AudioSource
+    public AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
 		health = 1;
@@ -99,6 +102,8 @@ public class CharControl : MonoBehaviour
 
             //Wait for point in animation to fire bullet
             yield return new WaitForSeconds(0.9f);
+
+            audioSource.Play();
 
             //Create bullet
             var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
