@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 923316532}
   - component: {fileID: 923316531}
   - component: {fileID: 923316530}
+  - component: {fileID: 923316533}
   m_Layer: 5
   m_Name: Stage Right button
   m_TagString: Untagged
@@ -318,7 +319,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 300, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923316530
 MonoBehaviour:
@@ -395,6 +396,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 923316528}
   m_CullTransparentMesh: 0
+--- !u!114 &923316533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923316528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6201f932e3989646b7b231d1fea567b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoonChoiceState: 0
 --- !u!1 &1180770194
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +494,7 @@ GameObject:
   - component: {fileID: 1192706065}
   - component: {fileID: 1192706064}
   - component: {fileID: 1192706063}
+  - component: {fileID: 1192706066}
   m_Layer: 5
   m_Name: Stage left Button
   m_TagString: Untagged
@@ -505,7 +519,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -300, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192706063
 MonoBehaviour:
@@ -582,6 +596,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1192706061}
   m_CullTransparentMesh: 0
+--- !u!114 &1192706066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1192706061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbcf5ea7fd4f434ebe919b18269ce80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SacChoiceState: 0
 --- !u!1 &1359919535
 GameObject:
   m_ObjectHideFlags: 0
