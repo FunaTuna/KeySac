@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharControl : MonoBehaviour
 {
@@ -16,9 +17,13 @@ public class CharControl : MonoBehaviour
     private int damage;
     public Rigidbody rb;
 
+    public Text healthUI;
+
     private GameObject stateMachine;
+    //Prefab for bullets player shoots
     public GameObject bulletPrefab;
 
+    //Spawn point for player bullets
     public Transform bulletSpawn;
 
 	// Use this for initialization
@@ -28,8 +33,12 @@ public class CharControl : MonoBehaviour
 		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
 		setStats ();
-		//here for testing
-		//gameManager.trade("q");
+        //here for testing
+        //gameManager.trade("q");
+
+        //Set Health UI
+        SetHealthUIText();
+
     }
 	
 	void Update () {
@@ -124,4 +133,13 @@ public class CharControl : MonoBehaviour
 			gameManager.onLevelFinish ();
 		}
 	}
+
+    public int getHealth() {
+        return this.health;
+    }
+
+    void SetHealthUIText()
+    {
+        healthUI.text = "Health: " + health.ToString();
+    }
 }
