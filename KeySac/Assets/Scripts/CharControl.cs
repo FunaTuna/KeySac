@@ -12,8 +12,8 @@ public class CharControl : MonoBehaviour
 
     //float acceleration = 2f;
     //float deceleration = 2f;
-    public int health;
-    public int damage;
+    private int health;
+    private int damage;
     public Rigidbody rb;
 
     private GameObject stateMachine;
@@ -23,10 +23,11 @@ public class CharControl : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
+		health = 1;
 		gameManager = FindObjectOfType<StateMachine> ();
 		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
-		setStats ();
+		//setStats ();
 		//here for testing
 		//gameManager.trade("q");
     }
@@ -35,15 +36,15 @@ public class CharControl : MonoBehaviour
 		if (health <= 0) {
 			gameManager.OnDeath ();
 			//Destroy (this.gameObject);
-
-			if (Input.anyKey) { //Only execute if a key is being pressed
+		}
+		if (Input.anyKey) { //Only execute if a key is being pressed
 				Move ();
 			}
-		}
 	}
 
     void Move()
     {
+		print ("A key is being pressed");
         bool[] Keys = gameManager.getKeys();
         if (Input.GetKey(KeyCode.W) && Keys[1])
         {

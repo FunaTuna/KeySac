@@ -12,9 +12,6 @@ public class StateMachine : MonoBehaviour {
 	private int Damage;
 	private float speed;
 	void Awake(){
-		Health = 1;
-		Damage = 1;
-		speed = 4f;
 		if (instance == null) {
 			instance = this;
 		} else if (instance != this) {
@@ -23,7 +20,7 @@ public class StateMachine : MonoBehaviour {
 		DontDestroyOnLoad (this);
 		currentState = "startscreen";
 		level = 1;
-		//Keys = new bool[] {true,true,true,true,true,true,true};
+		Keys = new bool[] {true,true,true,true,true,true,true};
 		 //Q //W //E //A //S //D//Space
 
 	}
@@ -45,6 +42,9 @@ public class StateMachine : MonoBehaviour {
 	public void OnRestart(){
 		currentState = "level1";
 		SceneManager.LoadScene ("SampleScene");
+		Health = 1;
+		Damage = 1;
+		speed = 4f;
 		Keys = new bool[] {true,true,true,true,true,true,true};
 	}
 	public void OnDeath(){
@@ -53,8 +53,11 @@ public class StateMachine : MonoBehaviour {
 	}
 	public void onStart(){
 		currentState = "level1";
-		SceneManager.LoadScene ("SampleScene");
+		Health = 1;
+		Damage = 1;
+		speed = 4f;
 		Keys = new bool[] {true,true,true,true,true,true,true};
+		SceneManager.LoadScene ("SampleScene");
 	}
 	public void onLevelFinish(){
 		currentState = "trader";
