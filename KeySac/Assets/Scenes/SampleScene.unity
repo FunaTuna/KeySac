@@ -629,22 +629,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370d404795718f846af4d90da47a3789, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1709577775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1301641282719340, guid: 26308b1de61344113973f3112a068c91,
-    type: 2}
-  m_PrefabInternal: {fileID: 154584819}
---- !u!114 &1709577777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1709577775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e754316cd854ed98063a2002e311c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1804049310
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,8 +939,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.485468, y: 8.233633, z: 6.8460803}
-  m_Center: {x: 2.1844158, y: -0.43642336, z: -0.000000032706623}
+  m_Size: {x: 5, y: 8.233633, z: 6.8460803}
+  m_Center: {x: 0, y: -0.43642336, z: -0.000000032706623}
 --- !u!54 &2052011977
 Rigidbody:
   m_ObjectHideFlags: 0
