@@ -84,6 +84,9 @@ public class CharControl : MonoBehaviour {
         bullet.AddComponent<TrailRenderer>();
 
     }
+	void SetDamage(){
+		BulletScript.SetDamage (1);
+	}
 
 	private void OnTriggerEnter(Collider other){
 		//Controls collision with enemy
