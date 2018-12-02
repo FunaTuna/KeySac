@@ -23,8 +23,10 @@ public class RghtButton : MonoBehaviour {
 	}
 	public void onClick(){
 		print ("Right Clicked");
-		string[] NumToString = {"q","w","e","a","s","d","space"}  ;
-		gameManager.sacrifice(NumToString[this.SacChoiceState]);
+		string[] keyToString = {"q","w","e","a","s","d","space"};
+		string[] boonToString ={"damage","hp","speed"}:
+		gameManager.boonAquire(boonToString[BoonChoiceState]);
+		gameManager.sacrifice(keyToString[this.SacChoiceState]);
 		gameManager.onTradeFinish();
 	}
 }
