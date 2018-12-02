@@ -46,7 +46,7 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     //TODO: Turn around on collision with a wall
-    //private void OnCollisionEnter(Collision other)
+    //void OnCollisionEnter(Collision other)
     //{
     //    if (other.collider.gameObject.tag == "Walls")
     //    {
@@ -54,7 +54,7 @@ public class EnemyMovement : MonoBehaviour {
     //    }
     //}
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.collider.gameObject.tag == "Walls")
         {
