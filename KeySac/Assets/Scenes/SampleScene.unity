@@ -202,6 +202,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9500000, guid: e5d852bdd5963c943b1b72223243651e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96f92a566cf97ae47b45abf347aaa5cf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5d852bdd5963c943b1b72223243651e, type: 3}
   m_IsPrefabAsset: 0
@@ -743,6 +747,38 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26308b1de61344113973f3112a068c91, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2052011975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100010, guid: e5d852bdd5963c943b1b72223243651e,
+    type: 3}
+  m_PrefabInternal: {fileID: 487036293}
+--- !u!65 &2052011976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052011975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.485468, y: 8.233633, z: 6.8460803}
+  m_Center: {x: 2.1844158, y: -0.43642336, z: -0.000000032706623}
+--- !u!54 &2052011977
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052011975}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2105019539
 Prefab:
   m_ObjectHideFlags: 0
