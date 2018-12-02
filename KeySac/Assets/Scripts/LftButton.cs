@@ -8,20 +8,22 @@ using UnityEngine.UI;
 public class LftButton : MonoBehaviour {
 	StateMachine gameManager;
 	public int SacChoiceState;
+	private bool[] internalKeys;
 	// Use this for initialization
 	void Start () {
 		gameManager = FindObjectOfType<StateMachine> ();
+		internalKeys = gameManager.getKeys();
 		int count = 0;
-		for (int i= (gameManager.Keys.Length); i>0;i=i-1){
-			if ( gameManager.Keys[i]== true){
+		for (int i= (internalKeys.Length); i>0;i=i-1){
+			if ( internalKeys[i]== true){
 				count++;
 			}
 		} // counts the number of Keys you can use.
 		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
 		//chooses one of those keys
 		if (count >0){
-			for(int i=0;i<=gameManager.Keys.Length;i=i-1){
-				if (gameManger.Keys[i] == true){
+			for(int i=0;i<=internalKeys.Length;i=i-1){
+				if (internalKeys[i] == true){
 					count = count-1;
 					if (count== 0){
 						SacChoiceState = i;

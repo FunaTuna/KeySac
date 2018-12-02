@@ -113,4 +113,7 @@ public class StateMachine : MonoBehaviour {
 	public bool[] getKeys(){
 		return Keys;
 	}
+	public bool[] getBoons(){
+		return Boons;
+	}
 }
