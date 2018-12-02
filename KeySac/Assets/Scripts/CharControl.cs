@@ -77,8 +77,13 @@ public class CharControl : MonoBehaviour {
     }
 
     void Fire() {
-        //Create bullet
+        //Set firing animation to start
 		animator.SetTrigger("Fire");
+
+        //Wait until shooting point in animation to make bullet
+        StartCoroutine(ChargeAnimation());
+
+        //Make bullet
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
         //Add velocity to bullet
@@ -86,7 +91,10 @@ public class CharControl : MonoBehaviour {
         //Bullet trail add
         bullet.AddComponent<TrailRenderer>();
 
+        //TODO: Wait for firing animation to stop before allowing another fire to occur
+
     }
+
 	void SetDamage(){
 		BulletScript.SetDamage (damage);
 	}
@@ -101,4 +109,15 @@ public class CharControl : MonoBehaviour {
 			gameManager.onLevelFinish ();
 		}
 	}
+
+    //Function to prevent firing again for as long as firing animation lasts
+    private IEnumerator FireAnimation () {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fire")) {
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        }
+    }
+
+    private IEnumerator ChargeAnimation() {
+        yield return new WaitForSeconds(1);
+    }
 }
