@@ -338,7 +338,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: e5d852bdd5963c943b1b72223243651e, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: e5d852bdd5963c943b1b72223243651e, type: 3}
       propertyPath: m_LocalPosition.x
