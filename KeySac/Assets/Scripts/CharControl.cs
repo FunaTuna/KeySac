@@ -24,6 +24,8 @@ public class CharControl : MonoBehaviour {
 		gameManager = FindObjectOfType<StateMachine> ();
 		animator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
+		//here for testing
+		//gameManager.trade("q");
     }
 	
 	void Update () {
@@ -39,36 +41,36 @@ public class CharControl : MonoBehaviour {
     }
 
     void Move() {
-
-        if (Input.GetKey(KeyCode.W))
+		bool[] Keys = gameManager.getKeys ();
+		if (Input.GetKey(KeyCode.W) && Keys[1])
         {
             transform.position += transform.forward * Time.deltaTime * moveSpeed;
             //rb.velocity  = transform.forward * moveSpeed * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.S))
+		else if (Input.GetKey(KeyCode.S)&& Keys[4])
         {
             transform.position += -transform.forward * Time.deltaTime * moveSpeed;
             //rb.AddRelativeForce(-transform.forward * moveSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.A))
+		else if (Input.GetKey(KeyCode.A)&& Keys[3])
         {
             transform.position += -transform.right * Time.deltaTime * moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.D))
+		else if (Input.GetKey(KeyCode.D)&& Keys[5])
         {
             transform.position += transform.right * Time.deltaTime * moveSpeed;
         }
 
-        if (Input.GetKey(KeyCode.Q))
+		if (Input.GetKey(KeyCode.Q)&& Keys[0])
         {
             transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.E))
+		if (Input.GetKey(KeyCode.E)&& Keys[2])
         {
             transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space)&& Keys[6])
         {
             Fire();
         }
