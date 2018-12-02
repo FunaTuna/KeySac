@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 1180770197}
   - component: {fileID: 1180770196}
   m_Layer: 5
-  m_Name: Stage left text
+  m_Name: Stage_left_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
