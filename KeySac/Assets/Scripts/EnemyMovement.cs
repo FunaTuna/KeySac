@@ -40,15 +40,23 @@ public class EnemyMovement : MonoBehaviour {
         }
     }
 
-    //Movement - patrols in straight line (unless player is seen)
+    //Movement - patrols forwardsin straight line (unless player is seen)
     void Move() {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 
     //TODO: Turn around on collision with a wall
-    private void OnCollisionEnter(Collision other)
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.collider.gameObject.tag == "Walls")
+    //    {
+    //        transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
+    //    }
+    //}
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (other.collider.tag == "Walls")
+        if (hit.collider.gameObject.tag == "Walls")
         {
             transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
         }
