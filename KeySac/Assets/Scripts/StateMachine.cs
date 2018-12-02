@@ -6,6 +6,7 @@ public class StateMachine : MonoBehaviour {
 	public static StateMachine instance = null;
 	string currentState;
 	public static bool[] Keys;
+	private int level;
 	void Awake(){
 		if (instance == null) {
 			instance = this;
@@ -14,6 +15,7 @@ public class StateMachine : MonoBehaviour {
 		}
 		DontDestroyOnLoad (this);
 		currentState = "startscreen";
+		level = 1;
 		//Keys = new bool[] {true,true,true,true,true,true,true};
 		 //Q //W //E //A //S //D//Space
 
@@ -31,6 +33,15 @@ public class StateMachine : MonoBehaviour {
 		currentState = "level1";
 		SceneManager.LoadScene ("SampleScene");
 		Keys = new bool[] {true,true,true,true,true,true,true};
+	}
+	public void onLevelFinish(){
+		currentState = "trader";
+		level += 1;
+		SceneManager.LoadScene ("Trading");
+	}
+	public void onTradeFinish(){
+		currentState = "level" + level;
+		SceneManager.LoadScene ("level" + level);
 	}
 	public void trade(string key){
 		switch (key) {

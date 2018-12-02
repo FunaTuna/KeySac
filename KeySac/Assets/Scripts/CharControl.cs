@@ -97,5 +97,8 @@ public class CharControl : MonoBehaviour {
 			health -= 1;
 			Destroy(other.gameObject);
 		}
+		if (other.tag == "Finish") {
+			gameManager.onLevelFinish ();
+		}
 	}
 }
