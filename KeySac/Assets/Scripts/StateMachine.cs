@@ -12,6 +12,9 @@ public class StateMachine : MonoBehaviour {
 	private int Damage;
 	private float speed;
 	void Awake(){
+		Health = 1;
+		Damage = 1;
+		speed = 4f;
 		if (instance == null) {
 			instance = this;
 		} else if (instance != this) {
