@@ -238,10 +238,6 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 96f92a566cf97ae47b45abf347aaa5cf, type: 2}
-    - target: {fileID: 100012, guid: e5d852bdd5963c943b1b72223243651e, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: e5d852bdd5963c943b1b72223243651e, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -859,6 +855,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 620a35dd933ad5d4bbbb90778020aede, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7637223abcbb56b4388f3758f8122e85, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 620a35dd933ad5d4bbbb90778020aede, type: 3}
   m_IsPrefabAsset: 0
