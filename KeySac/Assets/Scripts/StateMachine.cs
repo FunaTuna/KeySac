@@ -71,20 +71,20 @@ public class StateMachine : MonoBehaviour {
 		SceneManager.LoadScene ("level" + level);
 	}
 	public void boonAquire(string boon){
-		switch(key){
+		switch(boon){
 		case "damage":
 			Boons[0]= true;
-			setDamage(4)
+			setDamage(4);
 			break
 		case "hp":
 			Boons[1] = true;
-			setHealth(3)
+			setHealth(3);
 			break;
 		case "speed":
 			Boons[2] = true;
-			setSpeed(6f)
+			setSpeed(6f);
 			break;
-	}
+	}}
 	public void sacrifice(string key){
 		switch (key) {
 		case "q":

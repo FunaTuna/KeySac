@@ -11,7 +11,25 @@ public class LftButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameManager = FindObjectOfType<StateMachine> ();
-		SacChoiceState = (int)Mathf.Floor(Random.Range(0,6));
+		int count = 0;
+		for (int i= (gameManager.Keys.Length); i>0;i=i-1){
+			if ( gameManager.Keys[i]== true){
+				count++;
+			}
+		} // counts the number of Keys you can use.
+		transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
+		//chooses one of those keys
+		if (count >0){
+			for(int i=0;i<=gameManager.Keys.Length;i=i-1){
+				if (gameManger.Keys[i] == true){
+					count = count-1;
+					if (count== 0){
+						SacChoiceState = i;
+						break;
+					}
+				}
+			}//looks up what that choice is and assigns it to a number the 
+	}
 		string[] Keys = {"Turn Left","Move forwards","Turn Right","Move Left","Reverse","Move Right","Fire Your primary weapon"};
 		string corrispondingKey = Keys[SacChoiceState];
 		this.GetComponentInChildren<Text>().text = ("Keep the Capacity to "+ corrispondingKey + "?");
