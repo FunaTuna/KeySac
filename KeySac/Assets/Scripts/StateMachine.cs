@@ -63,6 +63,7 @@ public class StateMachine : MonoBehaviour {
 	}
 	public void onTradeFinish(){
 		currentState = "level" + level;
+		print (currentState);
 		SceneManager.LoadScene ("level" + level);
 	}
 	public void trade(string key){

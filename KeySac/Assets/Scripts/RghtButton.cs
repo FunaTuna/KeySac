@@ -9,6 +9,7 @@ public class RghtButton : MonoBehaviour {
 	public int BoonChoiceState;
 	// Use this for initialization
 	void Start () {
+		gameManager = FindObjectOfType<StateMachine> ();
 		BoonChoiceState = (int)Mathf.Floor(Random.Range(0,2));
 		string[] Boons = {"More damage","More HP","Faster Movement"};
 		string corrispondingBoon = Boons[BoonChoiceState];
@@ -19,9 +20,10 @@ public class RghtButton : MonoBehaviour {
 	void Update () {
 		
 	}
-	void onClick(){
+	public void onClick(){
+		print ("Right Clicked");
 		string[] NumToString = {"q","w","e","a","s","d","space"}  ;
-		//Trade(NumToString[SacChoiceState]);
-		//onTradeFinish();
+		gameManager.trade(NumToString[BoonChoiceState]);
+		gameManager.onTradeFinish();
 	}
 }

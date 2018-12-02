@@ -10,6 +10,7 @@ public class LftButton : MonoBehaviour {
 	public int SacChoiceState;
 	// Use this for initialization
 	void Start () {
+		gameManager = FindObjectOfType<StateMachine> ();
 		SacChoiceState = (int)Mathf.Floor(Random.Range(0,6));
 		string[] Keys = {"Turn Left","Move forwards","Turn Right","Move Left","Reverse","Move Right","Fire Your primary weapon"};
 		string corrispondingKey = Keys[SacChoiceState];
@@ -20,8 +21,8 @@ public class LftButton : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnClick(){
+	public void OnClick(){
 		
-		//onTradeFinish();
+		gameManager.onTradeFinish();
 	}
 }

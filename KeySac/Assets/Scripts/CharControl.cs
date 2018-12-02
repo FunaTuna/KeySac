@@ -36,11 +36,11 @@ public class CharControl : MonoBehaviour
 			gameManager.OnDeath ();
 			//Destroy (this.gameObject);
 
-        if (Input.anyKey) //Only execute if a key is being pressed
-        {
-            Move();
-        }
-    }
+			if (Input.anyKey) { //Only execute if a key is being pressed
+				Move ();
+			}
+		}
+	}
 
     void Move()
     {
