@@ -19,6 +19,7 @@ public class LftButton : MonoBehaviour {
 				count++;
 			}
 		} // counts the number of Keys you can use.
+		count++;
 		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,((float)count)-0.01f));
 		//chooses one of those keys
 		if (count >0){
