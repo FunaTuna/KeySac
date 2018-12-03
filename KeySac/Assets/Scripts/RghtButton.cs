@@ -34,7 +34,7 @@ public class RghtButton : MonoBehaviour {
 				}
 			}
 		}
-		string[] textualBoons = {"More damage","More HP","Faster Movement"};
+		string[] textualBoons = {"More damage","More HP","Faster Movement","Faster TurnSpeed"};
 		string corrispondingBoon = textualBoons[BoonChoiceState];
 		this.GetComponentInChildren<Text>().text = ("Or be Granted "+ corrispondingBoon + "?");
 	}
@@ -46,7 +46,7 @@ public class RghtButton : MonoBehaviour {
 	public void onClick(){
 		print ("Right Clicked");
 		string[] keyToString = {"q","w","e","a","s","d","space"};
-		string[] boonToString ={"damage","hp","speed"};
+		string[] boonToString ={"damage","hp","speed","turn"};
 		gameManager.boonAquire(boonToString[BoonChoiceState]);
 		gameManager.sacrifice(keyToString[lfscript.SacChoiceState]);
 		gameManager.onTradeFinish();

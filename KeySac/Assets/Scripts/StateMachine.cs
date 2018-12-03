@@ -7,12 +7,13 @@ public class StateMachine : MonoBehaviour {
 	string currentState;
 	public static bool[] Keys = new bool[] {true,true,true,true,true,true,true};
 	//Q //W //E //A //S //D//Space
-	public static bool[] Boons = new bool[] {false,false,false};
+	public static bool[] Boons = new bool[] {false,false,false,false};
 	private static int level = 1;
 
 	private static int Health;
 	private static int Damage;
 	private static float speed;
+	private static float turnspeed;
 	void Awake(){
 		if (instance == null) {
 			instance = this;
@@ -33,10 +34,14 @@ public class StateMachine : MonoBehaviour {
 	public void setSpeed(float spe){
 		speed = spe;
 	}
+	public void setTurnspeed(float truSpe){
+		turnspeed = truSpe;
+	}
 	//Change the player stats
 	public int getHealth(){return Health;}
 	public int getDamage(){return Damage;}
 	public float getSpeed(){return speed;}
+	public float getTurn(){return turnspeed;}
 
 	public void OnRestart(){
 		currentState = "level1";
@@ -44,9 +49,10 @@ public class StateMachine : MonoBehaviour {
 		level = 1;
 		Health = 1;
 		Damage = 1;
-		speed = 4f;
+		speed = 6f;
+		turnspeed = 50f;
 		Keys = new bool[] {true,true,true,true,true,true,true};
-		Boons = new bool[] {false,false,false};
+		Boons = new bool[] {false,false,false,false};
 	}
 	public void OnDeath(){
 		currentState = "GameOver";
@@ -56,9 +62,10 @@ public class StateMachine : MonoBehaviour {
 		currentState = "level1";
 		Health = 1;
 		Damage = 1;
-		speed = 4f;
+		speed = 6f;
+		turnspeed = 50f;
 		Keys = new bool[] {true,true,true,true,true,true,true};
-		Boons = new bool[] {false,false,false};
+		Boons = new bool[] {false,false,false,false};
 		SceneManager.LoadScene ("SampleScene");
 	}
 	public void onLevelFinish(){
@@ -87,7 +94,11 @@ public class StateMachine : MonoBehaviour {
 			break;
 		case "speed":
 			Boons[2] = true;
-			setSpeed(6f);
+			setSpeed(8f);
+			break;
+		case "turn":
+			Boons [3] = true;
+			setTurnspeed (75f);
 			break;
 	}}
 	public void sacrifice(string key){

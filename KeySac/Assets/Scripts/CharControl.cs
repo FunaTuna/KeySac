@@ -126,7 +126,7 @@ public class CharControl : MonoBehaviour
 		damage = gameManager.getDamage ();
 		SetDamage ();
 		moveSpeed = gameManager.getSpeed ();
-
+		turnSpeed = gameManager.getTurn ();
 	}
 
 	private void OnTriggerEnter(Collider other){
