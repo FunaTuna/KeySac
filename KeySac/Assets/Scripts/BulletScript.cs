@@ -25,18 +25,15 @@ public class BulletScript : MonoBehaviour {
 			EnemyMovement enemy = other.GetComponentInParent<EnemyMovement> ();
 			enemy.damage (BulletDamage);
             Destroy(gameObject);
-            Debug.Log(other.name);
         }
 		if (other.gameObject.tag == "Patrol") {
 			PartolScript enemy = other.GetComponent<PartolScript> ();
 			enemy.damage(BulletDamage);
 			Destroy (gameObject);
-			Debug.Log(other.name);
 		}
 		if (other.gameObject.tag == "Walls")
 		{
 			Destroy(gameObject);
-			Debug.Log(other.name);
 		}
     }
 }
