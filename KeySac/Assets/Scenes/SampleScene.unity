@@ -360,7 +360,10 @@ Prefab:
         type: 2}
       propertyPath: m_BaseOffset
       value: 3
-      objectReference: {fileID: 0}
+    - target: {fileID: 114743344972824284, guid: b440bb055fa07f14983c3b55cc17a90f,
+        type: 2}
+      propertyPath: health
+      value: 2
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b440bb055fa07f14983c3b55cc17a90f, type: 2}
   m_IsPrefabAsset: 0
