@@ -14,12 +14,11 @@ public class LftButton : MonoBehaviour {
 		gameManager = FindObjectOfType<StateMachine> ();
 		internalKeys = gameManager.getKeys();
 		int count = 0;
-		for (int i= (internalKeys.Length-1); i>0;i=i-1){
+		for (int i= (internalKeys.Length-1); i>-1;i=i-1){
 			if ( internalKeys[i]== true){
 				count++;
 			}
 		} // counts the number of Keys you can use.
-		count++;
 		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,((float)count)-0.01f));
 		//chooses one of those keys
 		if (count >0){
