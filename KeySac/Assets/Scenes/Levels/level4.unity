@@ -2697,6 +2697,18 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4102604608960176, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102604608960176, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102604608960176, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
   m_IsPrefabAsset: 0
@@ -4775,6 +4787,22 @@ Prefab:
     - target: {fileID: 1889720180510074, guid: 6304f38dceecd4142b415c01e86ece6b, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561900234865428, guid: 6304f38dceecd4142b415c01e86ece6b, type: 2}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564952373437774, guid: 6304f38dceecd4142b415c01e86ece6b, type: 2}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429888102358510, guid: 6304f38dceecd4142b415c01e86ece6b, type: 2}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889720180510074, guid: 6304f38dceecd4142b415c01e86ece6b, type: 2}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6304f38dceecd4142b415c01e86ece6b, type: 2}
