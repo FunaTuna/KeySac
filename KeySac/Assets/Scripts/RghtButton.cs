@@ -16,7 +16,7 @@ public class RghtButton : MonoBehaviour {
 		internalBoons = gameManager.getBoons();
 		lfscript=LeftButton.GetComponent<LftButton> ();
 		int count = 0;
-		for (int i= internalBoons.Length-1; i>0;i=i-1){
+		for (int i= internalBoons.Length-1; i>-1;i=i-1){
 			if (internalBoons[i]== false){
 				count++;
 			}
