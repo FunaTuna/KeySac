@@ -30,6 +30,7 @@ public class PartolScript : MonoBehaviour {
 	}
 	//Movement - patrols forwardsin straight line (unless player is seen)
 	void Move() {
-		transform.position += direction*transform.forward * speed * Time.deltaTime;
+		Vector3 V = new Vector3(1,0,0);
+		transform.position += direction * V *speed * Time.deltaTime;
 	}
 }

@@ -832,6 +832,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trailmat: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   rb: {fileID: 0}
+  healthUI: {fileID: 0}
   bulletPrefab: {fileID: 1657485340355804, guid: 62911b15abe4c4add8de6576e6c4a6b8,
     type: 2}
   bulletSpawn: {fileID: 4035286594099570}
+  audioSource: {fileID: 0}
