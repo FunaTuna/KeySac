@@ -860,6 +860,10 @@ Prefab:
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 121468556}
+    - target: {fileID: 1653084836648454, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
   m_IsPrefabAsset: 0
