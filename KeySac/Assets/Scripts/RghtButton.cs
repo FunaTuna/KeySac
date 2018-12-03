@@ -21,7 +21,7 @@ public class RghtButton : MonoBehaviour {
 				count++;
 			}
 		} // counts the number of internalBoons you can use.
-		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,count-1));
+		int transitionalChoice = (int)Mathf.Floor(Random.Range(0,((float)count)-0.01f));
 		//chooses one of those internalBoons
 		if (count >0){
 			for(int i=0;i<=internalBoons.Length-1;i++){
