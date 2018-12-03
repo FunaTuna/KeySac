@@ -325,6 +325,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f26e4daef3f4a168221713ea74aae1, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &121468556 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114800432112392364, guid: 64f26e4daef3f4a168221713ea74aae1,
+    type: 2}
+  m_PrefabInternal: {fileID: 121468555}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &168917511
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +850,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1657485340355804, guid: 62911b15abe4c4add8de6576e6c4a6b8,
         type: 2}
+    - target: {fileID: 114524188892683096, guid: 4357089dfe4e74617ab62fcfb16926c8,
+        type: 2}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1909071932}
+    - target: {fileID: 114524188892683096, guid: 4357089dfe4e74617ab62fcfb16926c8,
+        type: 2}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 121468556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4357089dfe4e74617ab62fcfb16926c8, type: 2}
   m_IsPrefabAsset: 0
@@ -1908,6 +1924,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8744df40c6dd498c9df99cccd6569d8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!82 &1909071932 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82015470099065008, guid: f8744df40c6dd498c9df99cccd6569d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1909071931}
 --- !u!1001 &2133538551
 Prefab:
   m_ObjectHideFlags: 0

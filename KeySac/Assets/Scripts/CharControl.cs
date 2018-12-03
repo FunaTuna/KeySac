@@ -42,7 +42,7 @@ public class CharControl : MonoBehaviour
 
         //Set Health UI
         SetHealthUIText();
-
+		audioSource = FindObjectOfType<AudioSource> ();
     }
 	
 	void Update () {
