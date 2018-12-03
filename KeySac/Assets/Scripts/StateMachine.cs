@@ -41,6 +41,7 @@ public class StateMachine : MonoBehaviour {
 	public void OnRestart(){
 		currentState = "level1";
 		SceneManager.LoadScene ("SampleScene");
+		level = 1;
 		Health = 1;
 		Damage = 1;
 		speed = 4f;

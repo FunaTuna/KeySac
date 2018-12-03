@@ -252,6 +252,10 @@ Prefab:
       propertyPath: m_Name
       value: enemy2blend
       objectReference: {fileID: 0}
+    - target: {fileID: 1260590149754034, guid: d45026c5d143a8b4da2ec3a3a63c5e11, type: 2}
+      propertyPath: m_TagString
+      value: Patrol
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d45026c5d143a8b4da2ec3a3a63c5e11, type: 2}
   m_IsPrefabAsset: 0

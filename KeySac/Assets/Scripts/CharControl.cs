@@ -103,7 +103,7 @@ public class CharControl : MonoBehaviour
             //Wait for point in animation to fire bullet
             yield return new WaitForSeconds(0.9f);
 
-            audioSource.Play();
+            //audioSource.Play();
 
             //Create bullet
             var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
@@ -132,7 +132,7 @@ public class CharControl : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other){
 		//Controls collision with enemy
-		if (other.tag == "Enemy") {
+		if ((other.tag == "Enemy" ) || (other.tag == "Patrol")) {
 			health -= 1;
 			Destroy(other.gameObject);
 		}

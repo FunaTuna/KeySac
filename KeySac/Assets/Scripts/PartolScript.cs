@@ -33,4 +33,7 @@ public class PartolScript : MonoBehaviour {
 		Vector3 V = new Vector3(1,0,0);
 		transform.position += direction * V *speed * Time.deltaTime;
 	}
+	public void damage (int dam){
+		health -= dam;
+	}
 }

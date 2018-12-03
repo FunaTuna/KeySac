@@ -19,6 +19,7 @@ public class BulletScript : MonoBehaviour {
     //Destroy bullet on collision with enemy
     private void OnTriggerEnter(Collider other)
     {
+		Debug.Log(other.name);
         if (other.gameObject.tag == "Enemy")
         {
 			EnemyMovement enemy = other.GetComponentInParent<EnemyMovement> ();
@@ -26,6 +27,12 @@ public class BulletScript : MonoBehaviour {
             Destroy(gameObject);
             Debug.Log(other.name);
         }
+		if (other.gameObject.tag == "Patrol") {
+			PartolScript enemy = other.GetComponent<PartolScript> ();
+			enemy.damage(BulletDamage);
+			Destroy (gameObject);
+			Debug.Log(other.name);
+		}
 		if (other.gameObject.tag == "Walls")
 		{
 			Destroy(gameObject);
