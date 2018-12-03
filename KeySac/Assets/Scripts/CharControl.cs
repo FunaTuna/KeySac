@@ -89,21 +89,21 @@ public class CharControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && Keys[6])
         {
-            StartCoroutine("Fire");
+			if (animator.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) {
+				StartCoroutine ("Fire");
+			}
         }
     }
 
     IEnumerator Fire()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) 
-        {
             //Start firing animation
             animator.SetTrigger("Fire");
 
             //Wait for point in animation to fire bullet
             yield return new WaitForSeconds(0.9f);
 
-            //audioSource.Play();
+            audioSource.Play();
 
             //Create bullet
             var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
@@ -112,7 +112,6 @@ public class CharControl : MonoBehaviour
             //Bullet trail add
             bullet.AddComponent<TrailRenderer>();
 			bullet.GetComponent<TrailRenderer> ().material = trailmat;
-        }
 
     }
     

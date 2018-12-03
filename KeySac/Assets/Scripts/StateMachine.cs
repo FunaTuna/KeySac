@@ -64,7 +64,11 @@ public class StateMachine : MonoBehaviour {
 	public void onLevelFinish(){
 		currentState = "trader";
 		level += 1;
-		SceneManager.LoadScene ("Trading");
+		if (level <= 5) {
+			SceneManager.LoadScene ("Trading");
+		} else {
+			SceneManager.LoadScene ("End");
+		}
 	}
 	public void onTradeFinish(){
 		currentState = "level" + level;
